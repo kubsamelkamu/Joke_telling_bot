@@ -4,11 +4,11 @@ function JokeDisplay(){
     const[joke,setJoke] = useState('');
     const[isSpeaking,setIsSpeaking] = useState(false);
     const[isLoading,setIsLoading] = useState();
-    const[showBox,setShowBox] = useState(false);
+    const[showJokeBox,setShowJokeBox] = useState(false);
 
     // Fetch the joke from the API
     const fetchJoke =useCallback(async()=>{
-
+        setIsLoading(true);
         try {
             const response = await fetch('https://official-joke-api.appspot.com/jokes/random');
             const data = await response.json();
@@ -57,13 +57,10 @@ function JokeDisplay(){
     }
 
     return(
-        <div>
-            <p>{joke}</p>
-            <button onClick={fetchJoke}>Another Joke</button>
-            <button onClick={toggleSpeech}>
-             {isSpeaking?'Stop Speaking':'Speak Aloud'}
-            </button>
+        <div className="container">
+
         </div>
+ 
     );
 
 }
