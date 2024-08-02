@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 function JokeDisplay(){
     const[joke,setJoke] = useState('');
@@ -8,7 +8,7 @@ function JokeDisplay(){
         fetchJoke();
     },[])
     // Fetch the joke from the API
-    const fetchJoke =async ()=>{
+    const fetchJoke =useCallback(async()=>{
         const response = await fetch('https://official-joke-api.appspot.com/jokes/random');
         const data = await response.json();
         const newJoke = `${data.setup} ${data.punchline}`;
@@ -17,7 +17,7 @@ function JokeDisplay(){
         if (isSpeaking) {
             SpeakText(newJoke);
         }
-    }
+    },[isSpeaking]);
 
     const toggleSpeech =()=>{
         setIsSpeaking(!isSpeaking);
