@@ -6,10 +6,17 @@ function JokeDisplay(){
 
     // Fetch the joke from the API
     const fetchJoke =useCallback(async()=>{
-        const response = await fetch('https://official-joke-api.appspot.com/jokes/random');
-        const data = await response.json();
-        const newJoke = `${data.setup} ${data.punchline}`;
-        setJoke(newJoke);
+
+        try {
+            const response = await fetch('https://official-joke-api.appspot.com/jokes/random');
+            const data = await response.json();
+            const newJoke = `${data.setup} ${data.punchline}`;
+            setJoke(newJoke);
+        } catch (error) {
+            console.error('Error fetching' + error.message);
+        }
+
+        
 
         if (isSpeaking) {
             SpeakText(newJoke);
