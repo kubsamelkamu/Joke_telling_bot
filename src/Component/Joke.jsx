@@ -29,3 +29,5 @@ function JokeDisplay(){
     );
 
 }
+
+export default JokeDisplay;
