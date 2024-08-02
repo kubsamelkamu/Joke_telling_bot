@@ -4,6 +4,18 @@ function JokeDisplay(){
     const[joke,setJoke] = useState('');
     const[isSpeaking,setIsSpeaking] = useState(false);
 
+
+    // Fetch the joke from the API
+    const fetchJoke =async ()=>{
+        const response = await fetch('https://official-joke-api.appspot.com/jokes/random');
+        const data = await response.json();
+        const newJoke = `${data.setup} ${data.punchline}`;
+        setJoke(newJoke);
+    }
+
+
+
+
     return(
         <div>
             <p>Joke displayed here.</p>
