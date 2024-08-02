@@ -6,7 +6,7 @@ function JokeDisplay(){
 
     useEffect(()=>{
         fetchJoke();
-    },[])
+    },[fetchJoke])
     // Fetch the joke from the API
     const fetchJoke =useCallback(async()=>{
         const response = await fetch('https://official-joke-api.appspot.com/jokes/random');
