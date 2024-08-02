@@ -23,7 +23,9 @@ function JokeDisplay(){
         <div>
             <p>{joke}</p>
             <button>Another Joke</button>
-            <button>Speak Aloud</button>
+            <button onClick={toggleSpeech}>
+             {isSpeaking?'Stop Speaking':'Speak Aloud'}
+            </button>
         </div>
     );
 
