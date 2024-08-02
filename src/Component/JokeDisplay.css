@@ -58,3 +58,7 @@ body{
     cursor: pointer;
     transition: background 0.5s;
 }
+
+.start-btn:hover {
+    background: #218838;
+  }
