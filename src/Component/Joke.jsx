@@ -43,6 +43,8 @@ function JokeDisplay(){
             }else if (event.key==='s' || event.key === 'S') {
                 SpeakText(joke);
                 setIsSpeaking(!isSpeaking);
+            }else if(event.key==='m' || event.key === 'M') {
+                setIsSpeaking(isSpeaking);
             }
         };
         
