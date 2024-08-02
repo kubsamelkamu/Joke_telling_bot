@@ -23,11 +23,15 @@ function JokeDisplay(){
 
     // Add Keyboard event Listenner
     useEffect(()=>{
+        // shortcut for displaying joke text and speaking text
         const handleKeyDown = (event)=>{
             if (event.key === 'J' || event.key === 'j') {
                 fetchJoke();
+            }else if (event.key==='s' || event.key === 'S') {
+                SpeakText(joke);
             }
         };
+        
 
         window.addEventListener('keydown', handleKeyDown);
 
