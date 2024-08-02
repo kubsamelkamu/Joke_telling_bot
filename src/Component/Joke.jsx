@@ -63,7 +63,7 @@ function JokeDisplay(){
                     <h3>Welcome to the Joke Bot!</h3>
                     <div className="avatar"></div>
                     <p>press the button below to Experience Joke</p>
-                    <button onClick={()=>setShowJokeBox(true)} className="start-btn">Start Joke</button>
+                    <button onClick={()=>setShowJokeBox(true)} className="btn start-btn">Start Joke</button>
                 </div>
             ):(
                 <div className="joke-box">
@@ -72,7 +72,18 @@ function JokeDisplay(){
                     ):(
                         <p className="joke-text">{joke}</p>
                     )}
+
+                    <div className="button-group">
+                        <button onClick={fetchJoke} className="btn" disabled={isLoading}>
+                            Get Another Joke
+                        </button>
+                        <button onClick={toggleSpeech} className="btn">
+                          {isSpeaking?'Stop Speeking':'speak Aloud'}
+                        </button>
+                    </div>
+
                 </div>
+                
             )}
 
         </div>
