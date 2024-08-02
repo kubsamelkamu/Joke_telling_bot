@@ -13,6 +13,10 @@ function JokeDisplay(){
         const data = await response.json();
         const newJoke = `${data.setup} ${data.punchline}`;
         setJoke(newJoke);
+
+        if (isSpeaking) {
+            SpeakText(newJoke);
+        }
     }
 
     const toggleSpeech =()=>{
