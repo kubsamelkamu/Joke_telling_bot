@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function JokeDisplay(){
     const[joke,setJoke] = useState('');
-    //const[isSpeaking,setIsSpeaking] = useState(false);
+    const[isSpeaking,setIsSpeaking] = useState(false);
 
     useEffect(()=>{
         fetchJoke();
@@ -15,9 +15,9 @@ function JokeDisplay(){
         setJoke(newJoke);
     }
 
-   
-
-
+    const toggleSpeech =()=>{
+        setIsSpeaking(!isSpeaking);
+    }
 
     return(
         <div>
