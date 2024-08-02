@@ -80,3 +80,13 @@ body{
     justify-content: center;
     gap: 10px;
 }
+
+.btn{
+    background: #007fbb;
+    color: wheat;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
