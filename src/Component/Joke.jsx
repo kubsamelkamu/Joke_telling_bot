@@ -42,6 +42,7 @@ function JokeDisplay(){
                 fetchJoke();
             }else if (event.key==='s' || event.key === 'S') {
                 SpeakText(joke);
+                setIsSpeaking(!isSpeaking);
             }
         };
         
@@ -52,7 +53,7 @@ function JokeDisplay(){
         return(()=>{
             window.removeEventListener('keydown', handleKeyDown);
         })
-    },[fetchJoke,joke])
+    },[fetchJoke,joke,])
 
     const toggleSpeech =()=>{
         setIsSpeaking(!isSpeaking);
