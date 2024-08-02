@@ -32,8 +32,12 @@ function JokeDisplay(){
 }
 
 
-function SpeakText(){
-    
+function SpeakText(text){
+    if ('speechSynthesis' in window) {
+        speechSynthesis.cancel();  
+        const utterance = new SpeechSynthesisUtterance(text);
+        speechSynthesis.speak(utterance);
+    }
 }
 
 export default JokeDisplay;
