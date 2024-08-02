@@ -37,6 +37,8 @@ function SpeakText(text){
         speechSynthesis.cancel();  
         const utterance = new SpeechSynthesisUtterance(text);
         speechSynthesis.speak(utterance);
+    }else{
+        alert('speechSynthesis not supported in this browser');
     }
 }
 
