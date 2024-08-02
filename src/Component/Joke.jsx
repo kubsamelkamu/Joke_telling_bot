@@ -22,7 +22,7 @@ function JokeDisplay(){
     return(
         <div>
             <p>{joke}</p>
-            <button>Another Joke</button>
+            <button onClick={fetchJoke}>Another Joke</button>
             <button onClick={toggleSpeech}>
              {isSpeaking?'Stop Speaking':'Speak Aloud'}
             </button>
