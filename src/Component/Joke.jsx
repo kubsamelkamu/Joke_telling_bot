@@ -23,16 +23,15 @@ function JokeDisplay(){
         }finally{
             setIsLoading(false);
         }
-
-        
-
-       
+  
     },[isSpeaking]);
 
     
     useEffect(()=>{
-        fetchJoke();
-    },[fetchJoke])
+        if(showJokeBox){
+            fetchJoke();
+        }
+    },[showJokeBox,fetchJoke])
 
     // Add Keyboard event Listenner
     useEffect(()=>{
