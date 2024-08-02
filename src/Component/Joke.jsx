@@ -30,6 +30,11 @@ function JokeDisplay(){
         };
 
         window.addEventListener('keydown', handleKeyDown);
+
+        //clean up the event listener
+        return(()=>{
+            window.removeEventListener('keydown', handleKeyDown);
+        })
     })
 
     const toggleSpeech =()=>{
