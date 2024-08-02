@@ -4,6 +4,10 @@ function JokeDisplay(){
     const[joke,setJoke] = useState('');
     const[isSpeaking,setIsSpeaking] = useState(false);
 
+    useState(()=>{
+        fetchJoke();
+    },[]);
+
 
     // Fetch the joke from the API
     const fetchJoke =async ()=>{
