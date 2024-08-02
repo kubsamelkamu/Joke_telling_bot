@@ -16,3 +16,14 @@ body{
     width: 100%;
     padding: 20px;
 }
+
+.welcome-box,.joke-box{
+    background-color: #bcc3de;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(78, 77, 77, 0.1);
+    text-align: center;
+    min-width: 600px;
+    height: auto;
+    width: 100%;
+}
