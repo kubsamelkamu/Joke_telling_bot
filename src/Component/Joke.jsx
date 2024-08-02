@@ -35,7 +35,7 @@ function JokeDisplay(){
         return(()=>{
             window.removeEventListener('keydown', handleKeyDown);
         })
-    })
+    },[fetchJoke])
 
     const toggleSpeech =()=>{
         setIsSpeaking(!isSpeaking);
