@@ -63,7 +63,7 @@ function JokeDisplay(){
                     <h3>Welcome to the Joke Bot!</h3>
                     <div className="avatar"></div>
                     <p>press the button below to Experience Joke</p>
-
+                    <button onClick={()=>setShowJokeBox(true)} className="start-btn">Start Joke</button>
                 </div>
             )}
 
