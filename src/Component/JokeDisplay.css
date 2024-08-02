@@ -27,3 +27,12 @@ body{
     height: auto;
     width: 100%;
 }
+
+.welcome-box .avatar{
+    width: 150px;
+    height: 150px;
+    background: url(/funny-avatar-icons.svg) no-repeat center center;
+    background-size: cover;
+    border-radius: 50px;
+    margin: 0 auto 40px;
+}
