@@ -47,7 +47,7 @@ body{
     background-size: cover;
     border-radius: 50px;
     margin: 0 auto 40px;
- 
+    animation: bounce 3s infinite;
 }
 
 .welcome-box h3{
