@@ -65,6 +65,14 @@ function JokeDisplay(){
                     <p>press the button below to Experience Joke</p>
                     <button onClick={()=>setShowJokeBox(true)} className="start-btn">Start Joke</button>
                 </div>
+            ):(
+                <div className="joke-box">
+                    {isLoading?(
+                        <p className="loading">Loading...</p>
+                    ):(
+                        <p className="joke-text">{joke}</p>
+                    )}
+                </div>
             )}
 
         </div>
