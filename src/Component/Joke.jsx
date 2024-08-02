@@ -58,6 +58,14 @@ function JokeDisplay(){
 
     return(
         <div className="container">
+            {!showJokeBox?(
+                <div className="welcome-box">
+                    <h3>Welcome to the Joke Bot!</h3>
+                    <div className="avatar"></div>
+                    <p>press the button below to Experience Joke</p>
+
+                </div>
+            )}
 
         </div>
  
