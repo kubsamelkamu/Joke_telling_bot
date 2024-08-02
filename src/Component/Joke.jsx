@@ -4,9 +4,6 @@ function JokeDisplay(){
     const[joke,setJoke] = useState('');
     const[isSpeaking,setIsSpeaking] = useState(false);
 
-    useEffect(()=>{
-        fetchJoke();
-    },[fetchJoke])
     // Fetch the joke from the API
     const fetchJoke =useCallback(async()=>{
         const response = await fetch('https://official-joke-api.appspot.com/jokes/random');
@@ -18,6 +15,22 @@ function JokeDisplay(){
             SpeakText(newJoke);
         }
     },[isSpeaking]);
+
+    
+    useEffect(()=>{
+        fetchJoke();
+    },[fetchJoke])
+
+    // Add Keyboard event Listenner
+    useEffect(()=>{
+        const handleKeyDown = (event)=>{
+            if (event.key === 'J' || event.key === 'j') {
+                fetchJoke();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+    })
 
     const toggleSpeech =()=>{
         setIsSpeaking(!isSpeaking);
