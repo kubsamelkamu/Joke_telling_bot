@@ -44,7 +44,7 @@ function JokeDisplay(){
                 SpeakText(joke);
                 setIsSpeaking(!isSpeaking);
             }else if(event.key==='m' || event.key === 'M') {
-                setIsSpeaking(isSpeaking);
+                setIsSpeaking(false);
             }
         };
         
