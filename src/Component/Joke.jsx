@@ -31,4 +31,9 @@ function JokeDisplay(){
 
 }
 
+
+function SpeakText(){
+    
+}
+
 export default JokeDisplay;
