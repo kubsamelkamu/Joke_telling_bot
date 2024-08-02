@@ -67,7 +67,7 @@ function JokeDisplay(){
                 <div className="welcome-box">
                     <h3>Welcome to this Joke Bot!</h3>
                     <div className="avatar"></div>
-                    <p>press j/J to see jokes , s/S to make the bot read it or m/M for mute</p>
+                    <p>press j/J to see jokes , s/S to make the bot read it or m/M to mute the sound</p>
                     <p>press the button below to Experience Joke</p>
                     <button onClick={()=>setShowJokeBox(true)} className="btn start-btn">Start Joke</button>
                 </div>
