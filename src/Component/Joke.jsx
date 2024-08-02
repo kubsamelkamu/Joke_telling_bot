@@ -20,6 +20,8 @@ function JokeDisplay(){
             }
         } catch (error) {
             console.error('Error fetching' + error.message);
+        }finally{
+            setIsLoading(false);
         }
 
         
@@ -85,7 +87,6 @@ function JokeDisplay(){
                 </div>
                 
             )}
-
         </div>
  
     );
