@@ -74,3 +74,9 @@ body{
     margin-bottom: 30px;
     color: #333;
 }
+
+.button-group{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
