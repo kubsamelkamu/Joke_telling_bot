@@ -53,7 +53,7 @@ function JokeDisplay(){
         return(()=>{
             window.removeEventListener('keydown', handleKeyDown);
         })
-    },[fetchJoke,joke,])
+    },[fetchJoke,joke,isSpeaking])
 
     const toggleSpeech =()=>{
         setIsSpeaking(!isSpeaking);
