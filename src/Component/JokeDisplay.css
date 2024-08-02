@@ -36,3 +36,9 @@ body{
     border-radius: 50px;
     margin: 0 auto 40px;
 }
+
+.welcome-box h3{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #444444;
+}
