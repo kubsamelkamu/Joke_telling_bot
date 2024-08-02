@@ -3,6 +3,8 @@ import { useCallback, useEffect, useState } from "react";
 function JokeDisplay(){
     const[joke,setJoke] = useState('');
     const[isSpeaking,setIsSpeaking] = useState(false);
+    const[isLoading,setIsLoading] = useState();
+    const[showBox,setShowBox] = useState(false);
 
     // Fetch the joke from the API
     const fetchJoke =useCallback(async()=>{
@@ -12,15 +14,17 @@ function JokeDisplay(){
             const data = await response.json();
             const newJoke = `${data.setup} ${data.punchline}`;
             setJoke(newJoke);
+
+            if (isSpeaking) {
+                SpeakText(newJoke);
+            }
         } catch (error) {
             console.error('Error fetching' + error.message);
         }
 
         
 
-        if (isSpeaking) {
-            SpeakText(newJoke);
-        }
+       
     },[isSpeaking]);
 
     
