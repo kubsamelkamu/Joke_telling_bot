@@ -99,3 +99,18 @@ body{
     background: #007fbb;
     cursor: not-allowed;
 }
+
+@media (max-width:760px) {
+    .welcome-box,.joke-box{
+        padding: 15px;
+    }
+    .welcome-box h3,.joke-text{
+        font-size: 1.2em;
+    }
+    .welcome-box p,.loading{
+        font-size: 1em;
+    }
+    .btn,.start-btn{
+        padding: 8px 16px;
+    } 
+}
