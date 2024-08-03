@@ -1,8 +1,16 @@
-# React + Vite
+# Joke-Telling Bot Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based web application that fetches jokes from an API and allows users to hear jokes using the Web Speech API.Also allow user to fetch joke , hear jokes using Keyboard shortcut.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetches random jokes from an API.
+- Allows users to hear jokes using text-to-speech.
+- Allows users to use keyboard shortcuts to hear(s/S),fetches joke(j/J) and mute the sounds(m/M).
+- Interactive and responsive design.
+
+## Demo
+
+![Demo Image](./assets/Demo.png)
+
+
