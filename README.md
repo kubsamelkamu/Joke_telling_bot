@@ -11,6 +11,30 @@ This is a React-based web application that fetches jokes from an API and allows 
 
 ## Demo
 
-![Demo Image](./assets/Demo.png)
+![Demo Image](./public/image.png)
 
+## Getting Started
 
+Follow these instructions to set up and run the project on your local machine.
+
+### Prerequisites
+
+- Node.js and npm should be installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Kubsamelkamu/joke-telling-bot.git
+   cd joke-telling-bot
+2.Install dependencies
+    npm install
+3.start Devalopment server
+    npm run dev
+## Built with
+-React
+-WebSpeech API
+-official Joke API
+
+## Contribution
+Contributions are welcome! Please fork the repository and use a feature branch. Pull requests are warmly welcome. 
